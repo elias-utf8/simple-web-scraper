@@ -1,5 +1,6 @@
 # simple-web-scraper
-Un web scraper modeste écrit en C++
+Un web scraper modeste écrit en C++ permettant de récupérer l'intégralité du code source d'un site ainsi que tout les liens figurant dans ce dernier.
+Peut être utiliser pour écrire un web crawler.
 
 # Installation
 
@@ -42,4 +43,15 @@ g++ -std=c++17 -Wall -I include -o scrapx src/main.o src/CScraper.o src/utils.o 
 # Usage 
 ```sh
 sudo ./scrapx <URL> 
+```
+Sortie attendue :
+```URL extraite: gnu.org => domaine: gnu.org
+Domaine extrait: gnu.org
+Tentative de création du dossier: "/simple-web-scraper/gnu.org"
+[+] Dossier déjà existant : "/simple-web-scraper/gnu.org"
+[+] Contenu HTML récupéré avec succès
+[+] 119 liens ont été extraits
+[+] Fichiers sauvegardés avec succès dans "/simple-web-scraper/gnu.org"
+[+] Opération réussie!
+Temps d'exécution total : 0.635116 secondes
 ```
