@@ -1,57 +1,83 @@
 # simple-web-scraper
-Un web scraper modeste écrit en C++ permettant de récupérer l'intégralité du code source d'un site ainsi que tout les liens figurant dans ce dernier.
-Peut être utiliser pour écrire un web crawler.
 
-# Installation
+## Description
 
-### Pré-requis
-- Compilateur g++
-```sh
-sudo apt install g++
-```
+`simple-web-scraper` est une application CLI C++ légère et performante conçue pour l'extraction de contenu web. Elle permet de récupérer le code source complet d'une page web ainsi que tous les liens qu'elle contient, fournissant une base solide pour le développement de crawlers web.
+
+## Fonctionnalités
+
+- Extraction complète du code HTML d'une page web
+- Identification et analyse automatique des liens
+- Interface en ligne de commande simple et efficace
+- Implémentation optimisée pour des performances élevées
+
+## Prérequis
+
+Le développement et l'utilisation de cette bibliothèque nécessitent les dépendances suivantes :
+
+- Compilateur C++ avec support C++17 (g++ recommandé)
 - Make
-```sh
-sudo apt install make
-```
 - Git
+- libcurl
+
+## Installation
+
+### Installation des dépendances
+
+Sur les systèmes basés sur Debian/Ubuntu :
+
 ```sh
-sudo apt install git
+sudo apt install g++ make git libcurl4-openssl-dev
 ```
-- Libcurl
-```sh
-sudo apt install libcurl4-openssl-dev
-```
-### Cloner le projet 
+
+### Récupération du code source
+
 ```sh
 git clone https://github.com/elias-utf8/simple-web-scraper.git
-```
-```sh
 cd simple-web-scraper
 ```
 
-### Compiler le projet
+### Compilation
+
 ```sh
-sudo make
+make
 ```
-Sortie attendue : 
+
+Lors d'une compilation réussie, vous devriez observer une sortie similaire à :
+
 ```
 g++ -std=c++17 -Wall -I include -c src/CScraper.cpp -o src/CScraper.o
 g++ -std=c++17 -Wall -I include -c src/utils.cpp -o src/utils.o
 g++ -std=c++17 -Wall -I include -o scrapx src/main.o src/CScraper.o src/utils.o -lcurl
 ```
 
-# Usage 
+## Utilisation
+
+L'exécution du programme se fait en spécifiant l'URL cible :
+
 ```sh
-sudo ./scrapx <URL> 
+./scrapx <URL>
 ```
+
+### Exemple
+
+```sh
+./scrapx gnu.org
+```
+
 Sortie attendue :
-```URL extraite: gnu.org => domaine: gnu.org
+
+```
+URL extraite: gnu.org => domaine: gnu.org
 Domaine extrait: gnu.org
 Tentative de création du dossier: "/simple-web-scraper/gnu.org"
 [+] Dossier déjà existant : "/simple-web-scraper/gnu.org"
 [+] Contenu HTML récupéré avec succès
 [+] 119 liens ont été extraits
 [+] Fichiers sauvegardés avec succès dans "/simple-web-scraper/gnu.org"
-[+] Opération réussie!
-Temps d'exécution total : 0.635116 secondes
+[+] Opération réussie! Temps d'exécution total : 0.635116 secondes
 ```
+
+## Contribution
+
+Les contributions sont les bienvenues.
