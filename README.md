@@ -4,7 +4,7 @@
 ![libcurl](https://img.shields.io/badge/Uses-libcurl-success)
 ![Build](https://img.shields.io/badge/Build-Make-brightgreen)
 ![OS](https://img.shields.io/badge/OS-Linux%20%7C%20Unix-lightgrey)
-
+[🇬🇧 English version](EN_README.md)
 ## Description
 
 `simple-web-scraper` est une application CLI C++ légère et performante conçue pour l'extraction de contenu web. Elle permet de récupérer le code source complet d'une page web ainsi que tous les liens qu'elle contient, fournissant une base solide pour le développement de crawlers web.
