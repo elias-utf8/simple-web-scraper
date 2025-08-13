@@ -1,10 +1,9 @@
+# simple-web-scraper
 ![C++17](https://img.shields.io/badge/C%2B%2B-17-blue)
 ![CLI](https://img.shields.io/badge/Type-CLI-informational)
 ![libcurl](https://img.shields.io/badge/Uses-libcurl-success)
 ![Build](https://img.shields.io/badge/Build-Make-brightgreen)
 ![OS](https://img.shields.io/badge/OS-Linux%20%7C%20Unix-lightgrey)
-
-# simple-web-scraper
 
 ## Description
 
